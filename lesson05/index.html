@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Calculator</title>
+</head>
+<body>
+
+    <!-- Two buttons to trigger different events -->
+    <button id="squareBtn">Square a Number</button>
+    <button id="multiplyBtn">Multiply Two Numbers</button>
+
+    <script>
+        // Mathematical helper functions
+        function squareNumber(number) {
+            return number * number;
+        }
+
+        function multiplyNumbers(number1, number2) {
+            return number1 * number2;
+        }
+
+        // --- Square Feature ---
+        document.getElementById('squareBtn').addEventListener('click', function() {
+            let userInput = prompt("Enter a number to square:");
+            
+            if (userInput !== null && userInput.trim() !== "" && !isNaN(userInput)) {
+                let number = parseFloat(userInput);
+                let result = squareNumber(number);
+                alert("The square of " + number + " is " + result + ".");
+            } else if (userInput !== null) {
+                alert("Please enter a valid numeric value.");
+            }
+        });
+
+        // --- Multiplication Feature ---
+        document.getElementById('multiplyBtn').addEventListener('click', function() {
+            let input1 = prompt("Enter the first number:");
+            
+            // Exit early if user clicks cancel on the first prompt
+            if (input1 === null) return; 
+
+            let input2 = prompt("Enter the second number:");
+            
+            // Exit early if user clicks cancel on the second prompt
+            if (input2 === null) return;
+
+            // Validate both inputs
+            if (input1.trim() !== "" && !isNaN(input1) && input2.trim() !== "" && !isNaN(input2)) {
+                let number1 = parseFloat(input1);
+                let number2 = parseFloat(input2);
+                let result = multiplyNumbers(number1, number2);
+                
+                alert("The product of " + number1 + " x " + number2 + " is " + result + ".");
+            } else {
+                alert("Please enter valid numeric values for both fields.");
+            }
+        });
+    </script>
+
+</body>
+</html>
