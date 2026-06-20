@@ -3,4 +3,4 @@ suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 
 for(face of faces)
   for(suit of suits)
-    console.log(face + " of " + suit)
+    console.log(`${face} of ${suit}`)
