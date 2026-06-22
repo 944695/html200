@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bank Application</title>
+		<style>
+			:root {
+				color-scheme: light;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			body {
+				margin: 0;
+				min-height: 100vh;
+				display: grid;
+				place-items: center;
+				background: linear-gradient(135deg, #e8f1ff, #f8fbff 50%, #eef5ff);
+				color: #16324f;
+			}
+
+			main {
+				max-width: 32rem;
+				padding: 2rem;
+				margin: 1.5rem;
+				border-radius: 1.25rem;
+				background: rgba(255, 255, 255, 0.9);
+				box-shadow: 0 18px 45px rgba(22, 50, 79, 0.12);
+				border: 1px solid rgba(22, 50, 79, 0.08);
+				text-align: center;
+			}
+
+			h1 {
+				margin-top: 0;
+			}
+
+			p {
+				line-height: 1.6;
+			}
+
+			.code {
+				display: inline-block;
+				margin-top: 0.75rem;
+				padding: 0.75rem 1rem;
+				border-radius: 0.75rem;
+				background: #16324f;
+				color: #fff;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Bank Application</h1>
+			<p>
+				This demo runs through browser prompts. Choose an action, enter amounts
+				when asked, and use <strong>Q</strong> to quit.
+			</p>
+			<div class="code">W = Withdraw · D = Deposit · B = Balance · Q = Quit</div>
+		</main>
+		<script src="bank.js"></script>
+	</body>
+</html>
