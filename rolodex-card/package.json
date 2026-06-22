@@ -1,0 +1,16 @@
+{
+  "name": "rolodex-card",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HTML/SCSS profile card assignment",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp styles"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8"
+  }
+}

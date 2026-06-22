@@ -1,0 +1,9 @@
+@mixin card-elevation($blur: 28px, $lift: 8px) {
+  box-shadow: 0 $lift $blur $shadow;
+}
+
+@mixin responsive($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

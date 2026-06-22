@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #4a4b4f;
+  background: linear-gradient(160deg, rgb(222.4591549296, 222.4591549296, 226.7408450704), rgb(206.0816901408, 206.0816901408, 212.5183098592));
+}
+
+.page-wrap {
+  min-height: 100vh;
+  padding: 2.25rem;
+  display: grid;
+  place-items: center;
+}
+
+.profile-card {
+  width: min(980px, 100%);
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgb(195.1633802817, 195.1633802817, 203.0366197183);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  box-shadow: 0 8px 28px rgba(24, 30, 54, 0.12);
+}
+.profile-card .profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.profile-card .profile-sidebar .avatar {
+  width: clamp(180px, 24vw, 340px);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid rgb(244.3057142857, 244.3057142857, 245.9942857143);
+}
+.profile-card .profile-sidebar h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  color: #35363a;
+  line-height: 1.1;
+}
+.profile-card .profile-sidebar .role {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.2vw, 2.2rem);
+  font-style: italic;
+  color: rgb(98.6666666667, 100, 105.3333333333);
+}
+.profile-card .profile-details {
+  background: #ececef;
+  border-radius: 8px;
+  padding: clamp(1.25rem, 2vw, 2rem);
+}
+.profile-card .profile-details ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.profile-card .profile-details ul li {
+  font-size: clamp(1rem, 1.9vw, 2rem);
+}
+.profile-card .profile-details ul li strong {
+  color: #35363a;
+}
+.profile-card .profile-details ul li a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 180ms ease;
+}
+.profile-card .profile-details ul li a:hover, .profile-card .profile-details ul li a:focus-visible {
+  border-color: rgb(22.2, 132.6, 243);
+  outline: none;
+}
+.profile-card .profile-details .linkedin-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+.profile-card .profile-details .linkedin-row .linkedin-icon {
+  width: clamp(24px, 2vw, 36px);
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  background: #0a66c2;
+  color: #fff;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: clamp(0.8rem, 1.4vw, 1.25rem);
+}
+
+@media (max-width: 760px) {
+  .page-wrap {
+    padding: 1rem;
+  }
+  .profile-card {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .profile-card .profile-sidebar .avatar {
+    width: min(72vw, 260px);
+  }
+  .profile-card .profile-sidebar .role {
+    font-size: 1.5rem;
+  }
+  .profile-card .profile-details ul li {
+    font-size: 1.15rem;
+  }
+}
